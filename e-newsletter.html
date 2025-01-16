@@ -1,0 +1,247 @@
+<html>
+
+<head>
+	<title> feedback </title>
+</head>
+
+<BODY bgcolor="black" onload=javascript:pageonload()>
+	<center>
+	<h1><b><font color=white ="Font face Arial black" size=14> E-NEWSLETTER </font></b></h1bv>
+		<br>
+		<center>
+		
+
+	<h2><font face="Times New Roman" color=white =5><marquee behaviour=scroll scrollamount="4">
+                 Request for our E-newsletter is free</marquee></font></h2><br>
+	<h4><font face="Times New Roman" color=white ize=4>Please spend your time rating our service here</font></h4>
+	<hr>
+
+<script>
+<!--
+var message="Function Disabled!";
+
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+</script>
+	<SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
+		<!-- Hide script from older browsers
+
+		function submitIT() {
+			rateOption = -1
+			for (i=0; i<myForm.rate.length; i++) {
+				if (myForm.rate[i].checked) {
+					rateOption = i
+				}
+			}
+			if (rateOption == -1) {
+				alert("You must select the ratings.")
+				return false
+			}
+else
+{
+alert("Data Submitted")
+return true
+
+}
+		}
+
+		// End hiding script -->
+	</SCRIPT>
+
+
+<FORM method="post" name="myForm" action = "submit.html">
+
+<center><table width="50%"   body bgcolor="white" border=1 cellspacing=10 cellpadding=5>
+
+  <tr>
+    <td width="16%"><font face="Arial" color=black size=3>First Name :</font></td>
+    <td width="84%"><input name="fname" type="text" size="30"></td>
+    </tr>
+  <tr>
+    <td><font face="Arial" color=black size=3>Last Name :</font> </td>
+    <td><input name="lname" type="text" size="30"></td>
+    </tr>
+  <tr>
+    <td><font face="Arial" color=black size=3>Email <strong><font color=red size=4></font></strong>:</font> </td>
+    <td><input name="txtemail" type="text" size="30"></td>
+    </tr>
+  <tr>
+    <td><font face="Arial" color=black size=3>How did you find out about us<strong><font color=red size=4></font></strong>:</font></td>
+    <td><select name="FindOut" size=1>
+      <option value="Othersite" selected>Link from other websites.
+      <option value="Friends" selected>Through Friends
+      <option value="Magazines" selected>Magazines
+      <option value="Don't Ask" selected>Heck Care!
+      <option value="None" selected>-Please Select-
+    </select></td>
+    </tr>
+  <tr>
+    <td><font face="Arial" color=black size=3>Site Rating<strong><font color=red size=4><font></strong>:<font></td>
+    <td><input type="radio" name="rate" value="good">
+<font color=red>Good
+  <input type="radio" name="rate" value="average">
+Average
+<input type="radio" name="rate" value="bad">
+Bad</td></font>
+    </tr>
+  <tr>
+    <td colspan="2"><font face="Arial" color=black size=3>Comments<strong><font color=red size=4></font></strong>:</font> </td>
+    </tr>
+  <tr>
+    <td colspan="2"><textarea name="comment" rows=7 cols=40>Please enter your coments here:</textarea></td>
+  </tr>
+</table>
+<p>
+<input type="submit" value="Submit" name="button1" onClick ="return submitIT()" >
+<input type="reset" value="Reset" name="button2">
+</p>
+
+</form>
+<CENTER>
+
+<b><FONT face="Comic Sans MS" color=blue size=2>
+<a href="home.html" target=right><img src="click_007.gif"></a><br>
+To back the home page </FONT></B><br>
+<b>    
+            		
+		
+<STYLE>.spanstyle {
+	COLOR: #0066ff; FONT-FAMILY:"Comic Sans MS"; FONT-SIZE: 14; FONT-WEIGHT: normal; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript">
+function changeScrollbarColor(C) {
+if (document.all) {
+document.body.style.scrollbarBaseColor = A;
+   }
+}
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function mover()
+{
+}
+//  End -->
+</script>
+
+<SCRIPT language=javascript>
+	var message="THANK YOU FOR YOUR FEEDBACK";
+	var x,y;
+	var step=12;
+	var flag=0;
+
+	message=message.split("");
+	var xpos=new Array();
+	for (i=0;i<=message.length-1;i++) {
+		xpos[i]=-50;
+	}
+
+	var ypos=new Array();
+	for (i=0;i<=message.length-1;i++) {
+		ypos[i]=-50;
+	}
+
+	function handlerMM(e) {
+		x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX+10;
+		y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY;
+		flag=1;
+	}
+
+	function makesnake() {
+		if (flag==1 && document.all) {
+    			for (i=message.length-1; i>=1; i--) {
+   				xpos[i]=xpos[i-1]+step;
+				ypos[i]=ypos[i-1];
+    			}
+			xpos[0]=x+step;
+			ypos[0]=y;
+
+			for (i=0; i<=message.length-1; i++) {
+    				var thisspan = eval("span"+(i)+".style");
+    				thisspan.posLeft=xpos[i];
+				thisspan.posTop=ypos[i];
+				thisspan.color=Math.random() * 255 * 255 * 255 + Math.random() * 255 * 255 + Math.random() * 255;
+    			}
+		}
+		else if (flag==1 && document.layers) {
+    			for (i=message.length-1; i>=1; i--) {
+   				xpos[i]=xpos[i-1]+step;
+				ypos[i]=ypos[i-1];
+    			}
+			xpos[0]=x+step;
+			ypos[0]=y;
+
+			for (i=0; i<message.length-1; i++) {
+    				var thisspan = eval("document.span"+i);
+    				thisspan.left=xpos[i];
+				thisspan.top=ypos[i];
+				thisspan.color=Math.random() * 255 * 255 * 255 + Math.random() * 255 * 255 + Math.random() * 255;
+			}
+		}
+	}
+</SCRIPT>
+
+<SCRIPT language=javascript>
+	for (i=0;i<=message.length-1;i++) {
+    		document.write("<span id='span"+i+"' class='spanstyle'>");
+		document.write(message[i]);
+    		document.write("</span>");
+	}
+
+	if (document.student) {
+		document.captureEvents(Event.MOUSEMOVE);
+	}
+	document.onmousemove = handlerMM;
+</SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+
+<SCRIPT language=javascript>
+	function pageonload() {
+		makesnake();
+		window.setTimeout("pageonload();", 2);
+	}
+</SCRIPT>
+<FORM>
+<HR SIZE="5">
+
+
+</body>
+
+</HTML>
+
+
